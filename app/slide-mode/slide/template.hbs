@@ -3,7 +3,7 @@
 </div>
 
 <ul class="row">
-  {{#each model.slides as |slide|}}
+  {{#each (sort-by "order" model.slides) as |slide|}}
     {{link-to "Slide" "slide-mode.slide.view" slide class="slide-number2"}}
   {{/each}}
 </ul>
