@@ -4,13 +4,17 @@
     {{link-to "See All Reasons" "admin.reason.index" class="button"}}
   </div>
 
-  {{#each model.slides as |slide|}}
-    <div class="panel-block">
-      <div class="level">
-        <div class="level-left">{{slide.content}}</div>
+  {{#sortable-objects sortableObjectList=model.slides sortEndAction="sortEndAction" enableSort=true}}
+    {{#each (sort-by "order" model.slides) as |slide|}}
+      <div class="panel-block">
+        {{#draggable-object content=slide isSortable=true}}
+          <div class="level">
+            <div class="level-left">{{slide.content}}</div>
+          </div>
+        {{/draggable-object}}
       </div>
-    </div>
-  {{/each}}
+    {{/each}}
+  {{/sortable-objects}}
 
   <div class="panel-block">
     {{link-to "Add New Slide" "admin.reason.new-slide" model class="button is-fullwidth is-primary"}}
