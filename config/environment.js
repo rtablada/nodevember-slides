@@ -2,6 +2,10 @@
 
 module.exports = function(environment) {
   var ENV = {
+    DS: {
+      host: 'http://slide-api.dev',
+      namespace: 'api'
+    },
     modulePrefix: 'slides',
     environment: environment,
     rootURL: '/',
