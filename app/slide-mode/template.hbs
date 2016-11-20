@@ -1,0 +1,16 @@
+<div class="full-page">
+  <div class="full-page__slide">{{ outlet }}</div>
+
+  <div class="full-page__footer">
+    <div class="row-of-12">
+      {{#each model as |slide|}}
+        {{link-to slide.number "slide-mode.slide" slide class="slide-number"}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+
+{{#link-to "admin.reason" class="admin-button"}}
+  <span class="fa fa-cogs"></span>
+{{/link-to}}

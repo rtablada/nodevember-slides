@@ -7,10 +7,7 @@
   {{#each model.slides as |slide|}}
     <div class="panel-block">
       <div class="level">
-        <div class="level-left">{{reason.number}} - {{reason.title}}</div>
-        <div class="level-right">
-          {{link-to "Manage Slides" "admin.reason.detail" reason}}
-        </div>
+        <div class="level-left">{{slide.content}}</div>
       </div>
     </div>
   {{/each}}

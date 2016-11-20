@@ -8,7 +8,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('slide-mode', { path: '/' }, function() {
-    this.route('slide', { path: '/:reason_id' });
+    this.route('slide', { path: '/:reason_id' }, function() {
+      this.route('view', { path: '/:slide_id' });
+    });
   });
 
   this.route('admin', function() {

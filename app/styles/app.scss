@@ -1,1 +1,89 @@
 @import 'bulma';
+
+.full-page {
+  display: flex;
+
+  height: 100vh;
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+  }
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$colors-list: ($blue, $green, $orange, $purple, $red, $turquoise, $yellow);
+$colors-list2: ($purple, $red, $turquoise, $yellow, $blue, $green, $orange);
+
+.row-of-12 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-number {
+  display: flex;
+  display: block;
+  padding: 1rem;
+  color: #333;
+  flex-grow: 1;
+
+  @each $current-color in $colors-list {
+    $i: index($colors-list, $current-color);
+
+    &:nth-of-type(#{$i}) {
+      background: $current-color;
+    }
+  }
+}
+
+.slide-number2 {
+  display: flex;
+  display: block;
+  padding: 1rem;
+  color: #333;
+  flex-grow: 1;
+
+  @each $current-color in $colors-list2 {
+    $i: index($colors-list2, $current-color);
+
+    &:nth-of-type(#{$i}) {
+      background: $current-color;
+    }
+  }
+}
+
+.admin-button {
+  background: #333;
+  color: #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  padding: 0.5rem;
+
+  font-size: 0.6rem;
+
+  opacity: 0.4;
+
+  .fa {
+    font-size: 1em;
+  }
+
+  &:hover {
+    opacity: 1;
+
+    color: $blue;
+  }
+}
