@@ -3,7 +3,7 @@
 
   <div class="full-page__footer">
     <div class="row-of-12">
-      {{#each model as |slide|}}
+      {{#each (sort-by "number" model) as |slide|}}
         {{link-to slide.number "slide-mode.slide" slide class="slide-number"}}
       {{/each}}
     </div>

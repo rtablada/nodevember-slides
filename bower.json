@@ -2,7 +2,7 @@
   "name": "slides",
   "dependencies": {
     "ember": "~2.9.0",
-    "ember-cli-shims": "0.1.3",
+    "ember-cli-shims": "~0.1.1",
     "bulma": "0.1.2",
     "font-awesome": "~4.5.0",
     "marked": "^0.3.6",

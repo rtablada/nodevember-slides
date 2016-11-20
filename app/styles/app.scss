@@ -4,8 +4,10 @@
   display: flex;
 
   height: 100vh;
+  overflow: hidden;
 
   &__slide {
+    font-size: 1.4rem;
     display: flex;
     flex-direction: column;
 
@@ -33,6 +35,7 @@ $colors-list2: ($purple, $red, $turquoise, $yellow, $blue, $green, $orange);
 }
 
 .slide-number {
+  text-align: center;
   display: flex;
   display: block;
   padding: 1rem;
@@ -41,14 +44,16 @@ $colors-list2: ($purple, $red, $turquoise, $yellow, $blue, $green, $orange);
 
   @each $current-color in $colors-list {
     $i: index($colors-list, $current-color);
+    $length: length($colors-list);
 
-    &:nth-of-type(#{$i}) {
+    &:nth-of-type(#{$length}n + #{$i}) {
       background: $current-color;
     }
   }
 }
 
 .slide-number2 {
+  text-align: center;
   display: flex;
   display: block;
   padding: 1rem;
@@ -57,8 +62,9 @@ $colors-list2: ($purple, $red, $turquoise, $yellow, $blue, $green, $orange);
 
   @each $current-color in $colors-list2 {
     $i: index($colors-list2, $current-color);
+    $length: length($colors-list2);
 
-    &:nth-of-type(#{$i}) {
+    &:nth-of-type(#{$length}n + #{$i}) {
       background: $current-color;
     }
   }
@@ -86,4 +92,25 @@ $colors-list2: ($purple, $red, $turquoise, $yellow, $blue, $green, $orange);
 
     color: $blue;
   }
+}
+
+.row {
+  flex-shrink: 0;
+  display: flex;
+}
+
+.content {
+  display: block;
+  padding: 8rem 2rem;
+
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+code {
+  font-size: 1em;
 }

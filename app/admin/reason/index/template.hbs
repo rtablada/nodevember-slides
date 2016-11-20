@@ -4,7 +4,7 @@
     {{link-to "Add New Reason" "admin.reason.new" class="button is-primary is-fullwidth"}}
   </div>
 
-  {{#each model as |reason|}}
+  {{#each (sort-by "number" model) as |reason|}}
     <div class="panel-block">
       <div class="level">
         <div class="level-left">#{{reason.number}} - {{reason.title}}</div>
