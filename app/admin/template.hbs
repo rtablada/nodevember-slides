@@ -1,0 +1,29 @@
+{{#bulma-nav hasShadow=true}}
+  {{#bulma-nav-left}}
+    {{link-to "Slide Mode" "slide-mode" class="nav-item"}}
+  {{/bulma-nav-left}}
+
+  {{#bulma-nav-center}}
+
+  {{/bulma-nav-center}}
+
+  {{#bulma-nav-toggle onmousedown=(action toggleProperty 'toggleNav')}}
+    <span></span>
+    <span></span>
+    <span></span>
+  {{/bulma-nav-toggle}}
+
+  {{#bulma-nav-right isMenu=true}}
+    {{link-to "Reasons" "admin.reason" class="nav-item"}}
+  {{/bulma-nav-right}}
+{{/bulma-nav}}
+
+{{#if toggleNav}}
+  {{#bulma-panel isHiddenDesktop=true isHiddenTablet=true isHiddenWidescreen=true}}
+    {{link-to "Reasons" "admin.reason" class="panel-block"}}
+  {{/bulma-panel}}
+{{/if}}
+
+<div class="section">
+  <div class="container">{{ outlet }}</div>
+</div>

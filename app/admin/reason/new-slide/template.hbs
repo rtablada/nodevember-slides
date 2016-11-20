@@ -1,0 +1,30 @@
+{{#bulma-panel heading="Add New Slide"}}
+
+  {{#simple-form onsubmit=(action "save") as |formValues|}}
+    {{#bulma-panel-block}}
+      <div class="columns">
+        <div class="column">
+          {{#bulma-control}}
+            {{textarea placeholder="Reason" value=formValues.stuff class="textarea" rows="20"}}
+          {{/bulma-control}}
+        </div>
+
+        <div class="column">
+          <div class="content">{{md-text text=formValues.stuff}}</div>
+        </div>
+      </div>
+    {{/bulma-panel-block}}
+
+    {{#bulma-panel-block}}
+      <div class="columns">
+        <div class="column">
+          {{link-to "Back" "admin.reason.new" class="button is-fullwidth"}}
+        </div>
+        <div class="column">
+          <button class="button is-primary is-fullwidth">Submit</button>
+        </div>
+      </div>
+    {{/bulma-panel-block}}
+  {{/simple-form}}
+
+{{/bulma-panel}}
