@@ -4,3 +4,9 @@
     <h2 class="subtitle is-2">Ryan Tablada</h2>
   </div>
 </div>
+
+<div style="offscreen">
+  {{#each model.slides as |slide|}}
+    {{format-markdown model.content}}
+  {{/each}}
+</div>

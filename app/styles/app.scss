@@ -186,3 +186,9 @@ video {
     margin: 0;
   }
 }
+
+.offscreen {
+  position: fixed;
+  left: 100%;
+  top: 100%;
+}
