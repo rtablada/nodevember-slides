@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     DS: {
-      host: 'http://polar-mesa-70129.herokuapp.com',
+      host: 'http://slide-api.dev',
       namespace: 'api'
     },
     modulePrefix: 'slides',
@@ -47,7 +47,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.DS.host = 'http://polar-mesa-70129.herokuapp.com';
   }
 
   return ENV;

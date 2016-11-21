@@ -6,6 +6,7 @@ export default Ember.Controller.extend({
       this.store.createRecord('slide', {
         reason: this.model,
         content,
+        order: this.model.get('slides.length'),
       }).save()
         .then(() => {
           this.transitionToRoute('admin.reason.detail', this.model);
