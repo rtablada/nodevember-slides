@@ -20,9 +20,8 @@ Router.map(function() {
 
       this.route('edit', { path: '/:reason_id/edit' });
 
-      this.route('new-slide', {
-        path: '/:reason_id/new-slide'
-      });
+      this.route('new-slide', { path: '/:reason_id/new-slide' });
+      this.route('edit-slide', { path: '/:id/edit-slide/:slide_id' });
     });
   });
 });

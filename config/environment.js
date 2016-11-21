@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     DS: {
-      host: 'http://slide-api.dev',
+      host: 'http://polar-mesa-70129.herokuapp.com',
       namespace: 'api'
     },
     modulePrefix: 'slides',

@@ -1,14 +1,18 @@
-{{#bulma-panel heading="Add New Reason" }}
+{{#bulma-panel heading="Editing Slide" }}
 
-  {{#simple-form onsubmit=(action "save") startingValues=model as |formValues|}}
+  {{#simple-form onsubmit=(action "save") startingValues=(hash stuff=model.content) as |formValues|}}
     {{#bulma-panel-block}}
-      {{#bulma-control}}
-        {{input placeholder="Reason" value=formValues.title class="input"}}
-      {{/bulma-control}}
+      <div class="columns">
+        <div class="column">
+          {{#bulma-control}}
+            {{textarea placeholder="Reason" value=formValues.stuff class="textarea" rows="20"}}
+          {{/bulma-control}}
+        </div>
 
-      {{#bulma-control}}
-        {{input placeholder="Number" value=formValues.number type="number" class="input"}}
-      {{/bulma-control}}
+        <div class="column">
+          <div class="content">{{format-markdown formValues.stuff}}</div>
+        </div>
+      </div>
     {{/bulma-panel-block}}
 
     {{#bulma-panel-block}}
