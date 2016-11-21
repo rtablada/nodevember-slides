@@ -167,3 +167,20 @@ $colors-list2: ($purple, $red, $turquoise, $yellow, $blue, $green, $orange);
 code {
   font-size: 1em;
 }
+
+video {
+  display: block;
+  margin: auto;
+  width: 30rem;
+  height: 30rem;
+}
+
+.clock {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
