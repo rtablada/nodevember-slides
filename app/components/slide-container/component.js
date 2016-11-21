@@ -32,13 +32,20 @@ export default Ember.Component.extend(EKMixin, {
     const router = getOwner(this).lookup('router:main');
     const routeName = router.currentRouteName;
     const route = getOwner(this).lookup(`route:${routeName}`);
+    const slides = route.modelFor('slide-mode.slide').get('slides');
 
     if (routeName === 'slide-mode.slide.view') {
-      const slides = route.modelFor('slide-mode.slide').get('slides');
       const currentSlide = route.modelFor('slide-mode.slide.view');
       const nextSlideOrder = currentSlide.get('order') + amount;
       const nextSlide = slides.findBy('order', nextSlideOrder);
 
+      if (nextSlide) {
+        router.transitionTo('slide-mode.slide.view', nextSlide);
+      }
+    } else if (routeName === 'slide-mode.slide.index') {
+      const nextSlideOrder = 0;
+
+      const nextSlide = slides.findBy('order', nextSlideOrder);
       if (nextSlide) {
         router.transitionTo('slide-mode.slide.view', nextSlide);
       }
