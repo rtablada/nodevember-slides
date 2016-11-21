@@ -1,4 +1,4 @@
-{{#bulma-panel heading="Add New Reason"}}
+{{#bulma-panel heading="Add New Reason" }}
 
   {{#simple-form onsubmit=(action "save") startingValues=model as |formValues|}}
     {{#bulma-panel-block}}
@@ -14,7 +14,7 @@
     {{#bulma-panel-block}}
       <div class="columns">
         <div class="column">
-          {{link-to "Back" "admin.reason.detail" model class="button is-fullwidth"}}
+          {{link-to "Back" "admin.reason.new" class="button is-fullwidth"}}
         </div>
         <div class="column">
           <button class="button is-primary is-fullwidth">Submit</button>

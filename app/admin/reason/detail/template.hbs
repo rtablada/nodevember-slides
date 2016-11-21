@@ -1,7 +1,14 @@
 {{#bulma-panel heading=model.title}}
 
   <div class="panel-block">
-    {{link-to "See All Reasons" "admin.reason.index" class="button"}}
+    <div class="level">
+      <div class="level-left">
+        {{link-to "See All Reasons" "admin.reason.index" class="button"}}
+      </div>
+      <div class="level-right">
+        {{link-to "Edit" "admin.reason.edit" model class="button"}}
+      </div>
+    </div>
   </div>
 
   {{#sortable-objects sortableObjectList=model.slides sortEndAction="sortEndAction" enableSort=true}}

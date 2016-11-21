@@ -70,12 +70,41 @@ $colors-list2: ($purple, $red, $turquoise, $yellow, $blue, $green, $orange);
   }
 }
 
-.admin-button {
-  background: #333;
-  color: #eee;
+.slide-actions {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.home-button {
+  display: block;
+  background: $blue;
+  color: #eee;
+
+
+  padding: 0.5rem;
+
+  font-size: 1rem;
+
+  opacity: 0.4;
+
+  .fa {
+    font-size: 1em;
+  }
+
+  &:hover {
+    opacity: 1;
+
+    color: $black;
+  }
+}
+
+.admin-button {
+  display: block;
+  background: #333;
+  color: #eee;
+
 
   padding: 0.5rem;
 
