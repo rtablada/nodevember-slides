@@ -1,5 +1,10 @@
 <div class="full-page">
-  <div class="full-page__slide">{{ outlet }}</div>
+  <div class="full-page__slide">
+    {{ outlet }}
+    <div class="clock">
+      <h2>{{moment-format time "HH:mm:ss"}}</h2>
+    </div>
+  </div>
 
   <div class="full-page__footer">
     <div class="row-of-12">
@@ -18,8 +23,4 @@
   {{#link-to "slide-mode" class="home-button"}}
     <span class="fa fa-home"></span>
   {{/link-to}}
-</div>
-
-<div class="clock">
-  <h2>{{moment-format time "HH:mm:ss"}}</h2>
 </div>

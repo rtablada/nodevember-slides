@@ -7,6 +7,7 @@
   overflow: hidden;
 
   &__slide {
+    position: relative;
     font-size: 1.4rem;
     display: flex;
     flex-direction: column;
@@ -36,7 +37,7 @@ $colors-list2: ($purple, $red, $turquoise, $yellow, $blue, $green, $orange);
 }
 
 .slide-number {
-  flex-basis: calc(100%/13);
+  flex-basis: calc(100%/14);
   flex-shrink: 0;
   text-align: center;
   display: flex;
@@ -176,11 +177,12 @@ video {
 }
 
 .clock {
-  position: fixed;
-  bottom: 1rem;
-  left: 1rem;
+  position: absolute;;
+  top: 2rem;
+  right: 2rem;
 
   h2 {
     font-size: 1.6rem;
+    margin: 0;
   }
 }
