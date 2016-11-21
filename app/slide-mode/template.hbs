@@ -1,4 +1,4 @@
-<div class="full-page">
+{{#slide-container groups=model}}
   <div class="full-page__slide">
     {{ outlet }}
     <div class="clock">
@@ -13,7 +13,8 @@
       {{/each}}
     </div>
   </div>
-</div>
+{{/slide-container}}
+
 
 
 <div class="slide-actions">
