@@ -176,19 +176,10 @@ video {
   height: 30rem;
 }
 
-.clock {
-  position: absolute;;
-  top: 2rem;
-  right: 2rem;
-
-  h2 {
-    font-size: 1.6rem;
-    margin: 0;
-  }
-}
-
 .offscreen {
   position: fixed;
   left: 100%;
   top: 100%;
 }
+
+@import "clock";

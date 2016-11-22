@@ -1,9 +1,8 @@
 {{#slide-container groups=model}}
   <div class="full-page__slide">
     {{ outlet }}
-    <div class="clock">
-      <h2>{{moment-format time "HH:mm:ss"}}</h2>
-    </div>
+
+    {{clock-timer}}
   </div>
 
   <div class="full-page__footer">

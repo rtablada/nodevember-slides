@@ -1,0 +1,25 @@
+<div class="clock">
+  {{#if show}}
+    <button {{action toggleProperty "show"}} class="clock__btn">
+      <span class="fa fa-angle-right"></span>
+    </button>
+
+    {{#if showTimer}}
+    {{else}}
+      <button {{action toggleProperty "showTimer"}} class="clock__btn">
+        <span class="fa fa-fire"></span>
+      </button>
+    {{/if}}
+    {{#if showTime}}
+      <h2>{{moment-format clock.currentTime "HH:mm:ss"}}</h2>
+    {{else}}
+      <button {{action toggleProperty "showTime"}} class="clock__btn">
+        <span class="fa fa-clock-o"></span>
+      </button>
+    {{/if}}
+  {{else}}
+    <button {{action toggleProperty "show"}} class="clock__btn">
+      <span class="fa fa-clock-o"></span>
+    </button>
+  {{/if}}
+</div>
